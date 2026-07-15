@@ -1,0 +1,24 @@
+import random  
+num = random.randint(1, 100) 
+print("Welcome to Guess the Number!")
+print("----------------------------------------")
+print("Rules: You have to guess my number in 6 tries or less")
+print("The number is between 1-100 inclusive")
+
+for i in range (0,6):
+    guess = int(input("What's your guess-"))
+    if guess > 100:
+        print("Invalid Number")
+        break
+    if guess == num:
+        print("Wow! You guessed it")
+        break
+    elif guess < num:
+        print("The number is greater than " + str(guess))
+    elif guess > num:
+        print("The number is less than " + str(guess))
+
+print("----------------------------------------")
+print("The number was " + str(num))
+print("----------------------------------------")
+print("Thanks for Playing")
